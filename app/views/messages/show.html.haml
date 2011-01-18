@@ -1,0 +1,14 @@
+%p
+  %b Sender:
+  = @message.sender_id
+%p
+  %b Recipient:
+  = @message.recipient_id
+%p
+  %b Subject:
+  = @message.subject
+%p
+  %b Body:
+  = @message.body
+
+= link_to 'Back', messages_path

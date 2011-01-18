@@ -1,4 +1,6 @@
 Messages::Application.routes.draw do
+  resources :messages, :except => [:edit, :update]
+
   namespace :admin do
     resources :users
   end
