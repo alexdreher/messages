@@ -1,0 +1,25 @@
+%h1 Listing admin_messages
+
+%table
+  %tr
+    %th Sender
+    %th Recipient
+    %th Subject
+    %th Body
+    %th
+    %th
+    %th
+
+  - @admin_messages.each do |admin_message|
+    %tr
+      %td= admin_message.sender_id
+      %td= admin_message.recipient_id
+      %td= admin_message.subject
+      %td= admin_message.body
+      %td= link_to 'Show', admin_message_path(admin_message)
+      %td= link_to 'Edit', edit_admin_message_path(admin_message)
+      %td= link_to 'Destroy', admin_message_path(admin_message), :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Message', new_admin_message_path

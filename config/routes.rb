@@ -3,6 +3,7 @@ Messages::Application.routes.draw do
 
   namespace :admin do
     resources :users
+    resources :messages
   end
   
   devise_for :users

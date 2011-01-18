@@ -1,0 +1,16 @@
+%p
+  %b Sender:
+  = @admin_message.sender_id
+%p
+  %b Recipient:
+  = @admin_message.recipient_id
+%p
+  %b Subject:
+  = @admin_message.subject
+%p
+  %b Body:
+  = @admin_message.body
+
+= link_to 'Edit', edit_admin_message_path(@admin_message)
+\|
+= link_to 'Back', admin_messages_path
