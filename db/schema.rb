@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110118110237) do
+ActiveRecord::Schema.define(:version => 20110118132248) do
 
   create_table "messages", :force => true do |t|
     t.integer  "sender_id"
@@ -20,6 +20,10 @@ ActiveRecord::Schema.define(:version => 20110118110237) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "messages", ["recipient_id"], :name => "index_messages_on_recipient_id"
+  add_index "messages", ["sender_id"], :name => "index_messages_on_sender_id"
+  add_index "messages", ["subject"], :name => "index_messages_on_subject"
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "",    :null => false
