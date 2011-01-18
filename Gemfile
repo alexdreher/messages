@@ -11,6 +11,7 @@ gem 'compass'
 gem 'jquery-rails'
 
 gem 'devise'
+gem 'cancan'
 
 group :development, :test do    
   gem 'rspec-rails'

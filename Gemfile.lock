@@ -35,6 +35,7 @@ GEM
       ZenTest
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
+    cancan (1.5.0)
     capistrano (2.5.19)
       highline
       net-scp (>= 1.0.0)
@@ -166,6 +167,7 @@ PLATFORMS
 DEPENDENCIES
   autotest-growl
   autotest-rails
+  cancan
   capistrano
   capybara
   compass
