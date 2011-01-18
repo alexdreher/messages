@@ -18,4 +18,6 @@ group :development, :test do
   gem 'autotest-rails'
   gem 'autotest-growl'
   gem 'launchy'
+  gem 'factory_girl'
+  gem 'database_cleaner'
 end
